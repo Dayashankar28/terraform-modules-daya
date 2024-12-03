@@ -17,7 +17,7 @@ data "aws_security_group" "default" {
 resource "aws_instance" "create_ec2" {
   ami = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  key_name = aws_key_pair.deployer.key_name
+  key_name = var.key_name
   security_groups = [data.aws_security_group.default.name]
 
   tags = {
