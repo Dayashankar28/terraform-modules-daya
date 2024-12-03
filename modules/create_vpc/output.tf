@@ -5,3 +5,7 @@ output "igw_name" {
 output "vpc_name" {
   value = aws_vpc.main.tags["Name"]
 }
+
+output "cidr_block" {
+  value = aws_vpc.main.cidr_block
+}
