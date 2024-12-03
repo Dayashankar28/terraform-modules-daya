@@ -18,3 +18,10 @@ output "private_subnet_1" {
   value = aws_subnet.private_subnet_1.tags["Name"]
 }
 
+output "public_subnet_cidr" {
+  value = aws_subnet.private_subnet_1.cidr_block
+}
+
+output "private_subnet_cidr" {
+  value = aws_subnet.private_subnet_1.cidr_block
+}
