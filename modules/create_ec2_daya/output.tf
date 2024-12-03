@@ -6,3 +6,7 @@ output "security_groups" {
     value = data.aws_security_group.default.name
   
 }
+
+output "ec2_public_ip_address" {
+  value = aws_instance.create_ec2.public_ip
+}
