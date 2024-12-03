@@ -7,6 +7,6 @@ output "security_groups" {
   
 }
 
-output "ec2_public_ip_address" {
+output "ec2_public_ip" {
   value = aws_instance.create_ec2.public_ip
 }
