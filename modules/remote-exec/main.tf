@@ -11,7 +11,8 @@ resource "null_resource" "file_copy" {
         inline = [
           "sudo apt update -y",
           "sudo apt install jq git -y",
-          "echo 'This is remote-exec example' > remote-exec.txt"
+          "echo 'This is remote-exec example' > remote-exec.txt",
+          "touch demo.txt"
         ]
     }
 }  
