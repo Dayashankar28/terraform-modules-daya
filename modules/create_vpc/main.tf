@@ -42,4 +42,35 @@ resource "aws_subnet" "private_subnet_1" {
   }
 }
 
+// Create route table for public subnet
 
+resource "aws_route_table" "public-rt" {
+  vpc_id = aws_vpc.main.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.igw.id
+  }
+
+  tags = {
+      Name = "public-rt"
+  }
+
+}
+
+// Create route table for public subnet
+
+resource "aws_route_table" "private-rt" {
+  vpc_id = aws_vpc.main.id
+
+    tags = {
+      Name = "private-rt"
+  }
+
+
+  # route {
+  #   cidr_block = "0.0.0.0/0"
+  #   gateway_id = aws_internet_gateway.igw.id
+  # }
+  
+}
