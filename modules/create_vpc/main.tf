@@ -31,7 +31,7 @@ resource "aws_subnet" "public_subnet_1" {
   }
 }
 
-// Create Subnet-1 // that should be private
+// Create Subnet-2 // that should be private
 
 resource "aws_subnet" "private_subnet_1" {
   vpc_id     = aws_vpc.main.id
