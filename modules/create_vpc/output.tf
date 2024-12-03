@@ -9,3 +9,12 @@ output "vpc_name" {
 output "cidr_block" {
   value = aws_vpc.main.cidr_block
 }
+
+output "public_subnet_1" {
+  value = aws_subnet.public_subnet_1.tags["Name"]
+}
+
+output "private_subnet_1" {
+  value = aws_subnet.private_subnet_1.tags["Name"]
+}
+
